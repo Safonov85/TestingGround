@@ -31,6 +31,13 @@ namespace TestingGround
 				comboBox.Items.Add(makeList.names[i]);
 				i++;
 			}
+
+			i = 0;
+			foreach (var item in makeList.names)
+			{
+				listBox.Items.Add(makeList.names[i]);
+				i++;
+			}
 		}
 	}
 }
