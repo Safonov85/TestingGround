@@ -38,6 +38,21 @@ namespace TestingGround
 				listBox.Items.Add(makeList.names[i]);
 				i++;
 			}
+
+			comboBox.SelectedIndex = 0;
+		}
+
+		private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			if(listBox.SelectedIndex == 0)
+			{
+				richTextBox.Document.Blocks.Clear();
+				richTextBox.Document.Blocks.Add(new Paragraph(new Run("Book by Matthew in NT. Chapter 1 to 28")));
+			}
+			else
+			{
+				richTextBox.Document.Blocks.Clear();
+			}
 		}
 	}
 }

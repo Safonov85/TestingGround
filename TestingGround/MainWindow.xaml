@@ -5,10 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestingGround"
         mc:Ignorable="d"
-        Title="MainWindow" Height="463.855" Width="459.638">
+        Title="MainWindow" Height="463.855" Width="459.638" ResizeMode="CanMinimize">
     <Grid>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="104" Margin="77,44,0,0" VerticalAlignment="Top" Width="233"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="77,10,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0"/>
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="433" VerticalAlignment="Top" Width="452">
+            <TabItem Header="List">
+
+                <Grid Background="#FFE5E5E5">
+                    <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="242" VerticalAlignment="Top" Width="90" SelectionChanged="listBox_SelectionChanged"/>
+                    <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="242" Margin="103,0,0,0" VerticalAlignment="Top" Width="333">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="DropDown">
+                <Grid Background="#FFE5E5E5">
+                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120"/>
+                </Grid>
+
+            </TabItem>
+        </TabControl>
 
     </Grid>
 </Window>
