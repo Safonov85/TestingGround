@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,7 @@ namespace TestingGround
 		{
 			InitializeComponent();
 			MakeAList makeList = new MakeAList();
+			ImportTextFiles importTexts = new ImportTextFiles();
 
 			int i = 0;
 			foreach(var item in makeList.names)
@@ -40,6 +42,11 @@ namespace TestingGround
 			}
 
 			comboBox.SelectedIndex = 0;
+
+			if (!Directory.Exists(importTexts.myPath))
+			{
+				importTexts.CreateBooksDir();
+			}
 		}
 
 		private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -53,6 +60,21 @@ namespace TestingGround
 			{
 				richTextBox.Document.Blocks.Clear();
 			}
+		}
+	}
+
+	public class ImportTextFiles
+	{
+		//string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+		public string myPath = Environment.CurrentDirectory+"\\Books";
+
+		public ImportTextFiles()
+		{
+		}
+
+		public void CreateBooksDir()
+		{
+			Directory.CreateDirectory(myPath);
 		}
 	}
 }
