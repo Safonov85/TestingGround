@@ -21,11 +21,15 @@ namespace TestingGround
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		MakeAList makeList = new MakeAList();
+		ImportTextFiles importTexts = new ImportTextFiles();
+
+		string hostFolder = "Books";
+
 		public MainWindow()
 		{
 			InitializeComponent();
-			MakeAList makeList = new MakeAList();
-			ImportTextFiles importTexts = new ImportTextFiles();
+			
 
 			int i = 0;
 			foreach(var item in makeList.names)
@@ -51,30 +55,33 @@ namespace TestingGround
 
 		private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			if(listBox.SelectedIndex == 0)
+			int i = 0;
+			foreach(var item in makeList.names)
 			{
-				richTextBox.Document.Blocks.Clear();
-				richTextBox.Document.Blocks.Add(new Paragraph(new Run("Book by Matthew in NT. Chapter 1 to 28")));
+				if (listBox.SelectedIndex == i)
+				{
+					if (File.Exists(@hostFolder + @"\" + makeList.names[i] + ".txt"))
+					{
+						richTextBox.Document.Blocks.Clear();
+						richTextBox.Document.Blocks.Add(new Paragraph(new Run(importTexts.listOfTexts[i])));
+						//MessageBox.Show("File exists");
+						break;
+					}
+					else
+					{
+						MessageBox.Show("Doesn't exist");
+						break;
+					}
+					//richTextBox.Document.Blocks.Clear();
+					//richTextBox.Document.Blocks.Add(new Paragraph(new Run("Book by Matthew in NT. Chapter 1 to 28")));
+				}
+				else
+				{
+					richTextBox.Document.Blocks.Clear();
+				}
+				i++;
 			}
-			else
-			{
-				richTextBox.Document.Blocks.Clear();
-			}
-		}
-	}
-
-	public class ImportTextFiles
-	{
-		//string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-		public string myPath = Environment.CurrentDirectory+"\\Books";
-
-		public ImportTextFiles()
-		{
-		}
-
-		public void CreateBooksDir()
-		{
-			Directory.CreateDirectory(myPath);
+			
 		}
 	}
 }
