@@ -23,6 +23,7 @@ namespace TestingGround
 	{
 		MakeAList makeList = new MakeAList();
 		ImportTextFiles importTexts = new ImportTextFiles();
+		
 
 		string hostFolder = "Books";
 
@@ -81,7 +82,6 @@ namespace TestingGround
 				}
 				i++;
 			}
-			
 		}
 	}
 }
