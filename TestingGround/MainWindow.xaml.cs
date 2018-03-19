@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -23,13 +24,48 @@ namespace TestingGround
 	{
 		MakeAList makeList = new MakeAList();
 		ImportTextFiles importTexts = new ImportTextFiles();
-		
+		Random random = new Random();
+
+		bool[,] barrowedBooks = new bool[3, 10]
+		{
+			{ false, false, false, false, false, false, false, false, false, false },
+			{ false, false, false, false, false, false, false, false, false, false },
+			{ false, false, false, false, false, false, false, false, false, false }
+		};
 
 		string hostFolder = "Books";
 
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			for (int ij = 0; ij < barrowedBooks.GetLength(0); ij++)
+			{
+				for (int j = 0; j < barrowedBooks.GetLength(1); j++)
+				{
+					if(ij == 0 && j == 3)
+					{
+						barrowedBooks[ij, j] = true;
+					}
+
+					if (ij == 2 && j == 8)
+					{
+						barrowedBooks[ij, j] = true;
+					}
+				}
+			}
+
+
+			// Multidimensional Array[,] Visualized
+			for (int ij = 0; ij < barrowedBooks.GetLength(0); ij++)
+			{
+				for (int j = 0; j < barrowedBooks.GetLength(1); j++)
+				{
+					Debug.Write(barrowedBooks[ij, j] + " ");
+				}
+				Debug.WriteLine("");
+			}
+
 			
 
 			int i = 0;
