@@ -33,6 +33,8 @@ namespace TestingGround
 			{ false, false, false, false, false, false, false, false, false, false }
 		};
 
+		bool[][] jaggedArrayStuff = new bool[5][];
+
 		string hostFolder = "Books";
 
 		public MainWindow()
@@ -66,7 +68,21 @@ namespace TestingGround
 				Debug.WriteLine("");
 			}
 
-			
+			jaggedArrayStuff[0] = new bool[] { false, true, false, false, false, true};
+			jaggedArrayStuff[1] = new bool[] { false, true };
+			jaggedArrayStuff[2] = new bool[] { false, true, false, true };
+			jaggedArrayStuff[3] = new bool[] { true, true, false, false, false, true };
+			jaggedArrayStuff[4] = new bool[] { true, false, false, false, false };
+
+			for (int jag = 0; jag < jaggedArrayStuff.Length; jag++)
+			{
+				for (int jagjag = 0; jagjag < jaggedArrayStuff[jag].Length; jagjag++)
+				{
+					Debug.Write(jaggedArrayStuff[jag][jagjag] + " ");
+				}
+				Debug.WriteLine("");
+			}
+
 
 			int i = 0;
 			foreach(var item in makeList.names)
