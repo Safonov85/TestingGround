@@ -83,6 +83,7 @@ namespace TestingGround
 				Debug.WriteLine("");
 			}
 
+			Debug.WriteLine("jagged array, third array count: " + jaggedArrayStuff[2].Length.ToString());
 
 			int i = 0;
 			foreach(var item in makeList.names)
@@ -122,7 +123,7 @@ namespace TestingGround
 					}
 					else
 					{
-						MessageBox.Show("Doesn't exist");
+						MessageBox.Show("Passage yet to be added");
 						break;
 					}
 					//richTextBox.Document.Blocks.Clear();
