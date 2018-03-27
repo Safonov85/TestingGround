@@ -41,49 +41,8 @@ namespace TestingGround
 		{
 			InitializeComponent();
 
-			for (int ij = 0; ij < barrowedBooks.GetLength(0); ij++)
-			{
-				for (int j = 0; j < barrowedBooks.GetLength(1); j++)
-				{
-					if(ij == 0 && j == 3)
-					{
-						barrowedBooks[ij, j] = true;
-					}
-
-					if (ij == 2 && j == 8)
-					{
-						barrowedBooks[ij, j] = true;
-					}
-				}
-			}
-
-
-			// Multidimensional Array[,] Visualized
-			for (int ij = 0; ij < barrowedBooks.GetLength(0); ij++)
-			{
-				for (int j = 0; j < barrowedBooks.GetLength(1); j++)
-				{
-					Debug.Write(barrowedBooks[ij, j] + " ");
-				}
-				Debug.WriteLine("");
-			}
-
-			jaggedArrayStuff[0] = new bool[] { false, true, false, false, false, true};
-			jaggedArrayStuff[1] = new bool[] { false, true };
-			jaggedArrayStuff[2] = new bool[] { false, true, false, true };
-			jaggedArrayStuff[3] = new bool[] { true, true, false, false, false, true };
-			jaggedArrayStuff[4] = new bool[] { true, false, false, false, false };
-
-			for (int jag = 0; jag < jaggedArrayStuff.Length; jag++)
-			{
-				for (int jagjag = 0; jagjag < jaggedArrayStuff[jag].Length; jagjag++)
-				{
-					Debug.Write(jaggedArrayStuff[jag][jagjag] + " ");
-				}
-				Debug.WriteLine("");
-			}
-
-			Debug.WriteLine("jagged array, third array count: " + jaggedArrayStuff[2].Length.ToString());
+			CreateMultiDimensionalArray();
+			CreateJaggedArray();
 
 			int i = 0;
 			foreach(var item in makeList.names)
@@ -105,6 +64,56 @@ namespace TestingGround
 			{
 				importTexts.CreateBooksDir();
 			}
+		}
+
+		void CreateMultiDimensionalArray()
+		{
+			// set certain bools in array to true
+			for (int ij = 0; ij < barrowedBooks.GetLength(0); ij++)
+			{
+				for (int j = 0; j < barrowedBooks.GetLength(1); j++)
+				{
+					if (ij == 0 && j == 3)
+					{
+						barrowedBooks[ij, j] = true;
+					}
+
+					if (ij == 2 && j == 8)
+					{
+						barrowedBooks[ij, j] = true;
+					}
+				}
+			}
+
+			// Multidimensional Array[,] Visualized
+			for (int ij = 0; ij < barrowedBooks.GetLength(0); ij++)
+			{
+				for (int j = 0; j < barrowedBooks.GetLength(1); j++)
+				{
+					Debug.Write(barrowedBooks[ij, j] + " ");
+				}
+				Debug.WriteLine("");
+			}
+		}
+
+		void CreateJaggedArray()
+		{
+			jaggedArrayStuff[0] = new bool[] { false, true, false, false, false, true };
+			jaggedArrayStuff[1] = new bool[] { false, true };
+			jaggedArrayStuff[2] = new bool[] { false, true, false, true };
+			jaggedArrayStuff[3] = new bool[] { true, true, false, false, false, true };
+			jaggedArrayStuff[4] = new bool[] { true, false, false, false, false };
+
+			for (int jag = 0; jag < jaggedArrayStuff.Length; jag++)
+			{
+				for (int jagjag = 0; jagjag < jaggedArrayStuff[jag].Length; jagjag++)
+				{
+					Debug.Write(jaggedArrayStuff[jag][jagjag] + " ");
+				}
+				Debug.WriteLine("");
+			}
+
+			Debug.WriteLine("jagged array, third array count: " + jaggedArrayStuff[2].Length.ToString());
 		}
 
 		private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
