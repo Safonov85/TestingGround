@@ -25,6 +25,7 @@ namespace TestingGround
 		MakeAList makeList = new MakeAList();
 		ImportTextFiles importTexts = new ImportTextFiles();
 		Random random = new Random();
+		string hostFolder = "Books";
 
 		bool[,] barrowedBooks = new bool[3, 10]
 		{
@@ -35,7 +36,7 @@ namespace TestingGround
 
 		bool[][] jaggedArrayStuff = new bool[5][];
 
-		string hostFolder = "Books";
+		List<int> makeListConvert = new List<int>();
 
 		public MainWindow()
 		{
@@ -64,6 +65,23 @@ namespace TestingGround
 			{
 				importTexts.CreateBooksDir();
 			}
+
+			for (int j = 0; j < 100; j++)
+			{
+				makeListConvert.Add(j);
+			}
+			int[] arrayList = ListToArrayConvert(makeListConvert);
+
+			foreach(var item in arrayList)
+			{
+				Debug.WriteLine(item);
+			}
+		}
+
+		int[] ListToArrayConvert(List<int> list)
+		{
+			int[] listArray = list.ToArray();
+			return listArray;
 		}
 
 		void CreateMultiDimensionalArray()
