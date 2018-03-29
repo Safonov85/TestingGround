@@ -38,6 +38,8 @@ namespace TestingGround
 
 		List<int> makeListConvert = new List<int>();
 
+		Dictionary<int, string> makeDictionary = new Dictionary<int, string>();
+
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -76,6 +78,17 @@ namespace TestingGround
 			{
 				Debug.WriteLine(item);
 			}
+
+			for (int ij = 0; ij < 100; ij++)
+			{
+				makeDictionary.Add(ij, ij.ToString() + "ABC");
+			}
+
+			foreach(var item in makeDictionary)
+			{
+				Debug.Write(item.Key.ToString() + " " + item.Value);
+			}
+			Debug.WriteLine("");
 		}
 
 		int[] ListToArrayConvert(List<int> list)
