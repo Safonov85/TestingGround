@@ -39,6 +39,7 @@ namespace TestingGround
 		List<int> makeListConvert = new List<int>();
 
 		Dictionary<int, string> makeDictionary = new Dictionary<int, string>();
+		
 
 		public MainWindow()
 		{
@@ -88,6 +89,22 @@ namespace TestingGround
 			{
 				Debug.Write(item.Key.ToString() + " " + item.Value);
 			}
+
+			makeListConvert.Reverse();
+
+			foreach (var item in makeListConvert)
+			{
+				Debug.WriteLine(item);
+			}
+			Debug.WriteLine("");
+
+			var elements = makeListConvert.SkipWhile((n, index) => n >= index);
+
+			foreach (var item in elements)
+			{
+				Debug.WriteLine(item);
+			}
+
 			Debug.WriteLine("");
 		}
 
