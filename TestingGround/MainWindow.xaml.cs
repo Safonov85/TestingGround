@@ -106,6 +106,15 @@ namespace TestingGround
 			}
 
 			Debug.WriteLine("");
+
+			foreach (var item in makeListConvert)
+			{
+				if(item.ToString().EndsWith("9"))
+				{
+					Debug.WriteLine(item);
+				}
+			}
+			Debug.WriteLine("");
 		}
 
 		int[] ListToArrayConvert(List<int> list)
