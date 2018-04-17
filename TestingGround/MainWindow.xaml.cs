@@ -115,6 +115,16 @@ namespace TestingGround
 				}
 			}
 			Debug.WriteLine("");
+			makeListConvert.Clear();
+			for (int u = 0; u < 50; u++)
+			{
+				makeListConvert.Add(random.Next(0, 3000));
+			}
+			foreach (var item in makeListConvert)
+			{
+				Debug.WriteLine(item.ToString());
+			}
+
 		}
 
 		int[] ListToArrayConvert(List<int> list)
