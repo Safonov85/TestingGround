@@ -48,8 +48,14 @@ namespace TestingGround
 			CreateMultiDimensionalArray();
 			CreateJaggedArray();
 
+			MixedOperations();
+
+		}
+
+		void MixedOperations()
+		{
 			int i = 0;
-			foreach(var item in makeList.names)
+			foreach (var item in makeList.names)
 			{
 				comboBox.Items.Add(makeList.names[i]);
 				i++;
@@ -75,7 +81,7 @@ namespace TestingGround
 			}
 			int[] arrayList = ListToArrayConvert(makeListConvert);
 
-			foreach(var item in arrayList)
+			foreach (var item in arrayList)
 			{
 				Debug.WriteLine(item);
 			}
@@ -85,7 +91,7 @@ namespace TestingGround
 				makeDictionary.Add(ij, ij.ToString() + "ABC");
 			}
 
-			foreach(var item in makeDictionary)
+			foreach (var item in makeDictionary)
 			{
 				Debug.Write(item.Key.ToString() + " " + item.Value);
 			}
@@ -98,6 +104,7 @@ namespace TestingGround
 			}
 			Debug.WriteLine("");
 
+			// LINQ
 			var elements = makeListConvert.SkipWhile((n, index) => n >= index);
 
 			foreach (var item in elements)
@@ -109,7 +116,7 @@ namespace TestingGround
 
 			foreach (var item in makeListConvert)
 			{
-				if(item.ToString().EndsWith("9"))
+				if (item.ToString().EndsWith("9"))
 				{
 					Debug.WriteLine(item);
 				}
@@ -124,7 +131,6 @@ namespace TestingGround
 			{
 				Debug.WriteLine(item.ToString());
 			}
-
 		}
 
 		int[] ListToArrayConvert(List<int> list)
