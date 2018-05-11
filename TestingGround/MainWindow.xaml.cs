@@ -26,6 +26,7 @@ namespace TestingGround
 		ImportTextFiles importTexts = new ImportTextFiles();
 		Random random = new Random();
 		string hostFolder = "Books";
+		RectangleConsole rectConsl = new RectangleConsole();
 
 		bool[,] barrowedBooks = new bool[3, 10]
 		{
@@ -131,6 +132,9 @@ namespace TestingGround
 			{
 				Debug.WriteLine(item.ToString());
 			}
+
+			// Rectangle in Debug Output
+			rectConsl.CreateRectangle();
 		}
 
 		int[] ListToArrayConvert(List<int> list)
