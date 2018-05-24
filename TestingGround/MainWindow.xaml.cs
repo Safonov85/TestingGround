@@ -27,6 +27,7 @@ namespace TestingGround
 		Random random = new Random();
 		string hostFolder = "Books";
 		RectangleConsole rectConsl = new RectangleConsole();
+		SimpleAnimation anim = new SimpleAnimation();
 
 		bool[,] barrowedBooks = new bool[3, 10]
 		{
