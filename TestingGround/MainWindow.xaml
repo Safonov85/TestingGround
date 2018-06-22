@@ -33,6 +33,17 @@
 
                 </Grid>
             </TabItem>
+
+            <TabItem Header="MotionBlur">
+                <Grid Background="Black" Name="ViewPortContainer">
+                    <Image Name="Viewport" Loaded="Viewport_Loaded"
+                           HorizontalAlignment="Left" Height="405"
+                           VerticalAlignment="Top" Width="446"
+                           MouseLeftButtonDown="Viewport_MouseLeftButtonDown"
+                           />
+
+                </Grid>
+            </TabItem>
         </TabControl>
 
     </Grid>

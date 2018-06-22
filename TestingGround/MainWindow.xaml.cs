@@ -29,6 +29,10 @@ namespace TestingGround
 		RectangleConsole rectConsl = new RectangleConsole();
 		SimpleAnimation anim = new SimpleAnimation();
 
+		int height, width;
+		WriteableBitmap wBitmap;
+		int drawlineX = 200;
+
 		bool[,] barrowedBooks = new bool[3, 10]
 		{
 			{ false, false, false, false, false, false, false, false, false, false },
@@ -52,6 +56,43 @@ namespace TestingGround
 
 			MixedOperations();
 
+		}
+
+		private void Viewport_Loaded(object sender, RoutedEventArgs e)
+		{
+			width = (int)this.ViewPortContainer.ActualWidth;
+			height = (int)this.ViewPortContainer.ActualHeight;
+			wBitmap = BitmapFactory.New(width, height);
+
+			Viewport.Source = wBitmap;
+
+			// Background Color
+			//wBitmap.FillRectangle(0, 0, width, height, Colors.Gray);
+
+			//CompositionTarget.Rendering += CompositionTarget_Rendering;
+
+			//wBitmap.FillEllipseCentered(drawlineX, 200, 20, 20, 200, true);
+			//wBitmap.FillEllipseCentered(drawlineX += 5, 200, 20, 20, 200, true);
+			//wBitmap.FillEllipseCentered(drawlineX += 5, 200, 20, 20, 200, true);
+			//wBitmap.FillEllipseCentered(drawlineX += 5, 200, 20, 20, 200, true);
+			wBitmap.FillEllipseCentered(drawlineX, 200, 20, 20, Color.FromArgb(255, 255, 255, 255));
+			//wBitmap.FillEllipseCentered(drawlineX += 5, 200, 20, 20, Color.FromArgb(40, 200, 40, 10));
+			//wBitmap.FillEllipseCentered(drawlineX += 5, 200, 20, 20, Color.FromArgb(40, 200, 40, 10));
+			//wBitmap.FillEllipseCentered(drawlineX += 5, 200, 20, 20, Color.FromArgb(40, 200, 40, 10));
+
+
+
+		}
+
+		private void CompositionTarget_Rendering(object sender, EventArgs e)
+		{
+			wBitmap.Clear();
+			
+			wBitmap.FillEllipseCentered(drawlineX += 5, 200, 20, 20, 200, true);
+			if(drawlineX > width)
+			{
+				drawlineX = 0;
+			}
 		}
 
 		void MixedOperations()
@@ -194,6 +235,20 @@ namespace TestingGround
 			Debug.WriteLine("jagged array, third array count: " + jaggedArrayStuff[2].Length.ToString());
 		}
 
+		private void Viewport_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+		{
+			// something is not right here
+
+			WriteableBitmap tempBitmap = wBitmap;
+			ImageFilter.AlterTransparency(tempBitmap, 70);
+			wBitmap.Clear();
+			wBitmap = tempBitmap;
+			Viewport.Source = wBitmap;
+			
+			//tempBitmap.FillEllipseCentered(drawlineX += 5, 200, 20, 20, Color.FromArgb(255, 255, 255, 255));
+
+		}
+
 		private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 			int i = 0;
@@ -223,5 +278,7 @@ namespace TestingGround
 				i++;
 			}
 		}
+
+
 	}
 }
