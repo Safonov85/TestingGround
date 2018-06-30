@@ -55,7 +55,6 @@ namespace TestingGround
 			CreateJaggedArray();
 
 			MixedOperations();
-
 		}
 
 		private void Viewport_Loaded(object sender, RoutedEventArgs e)
@@ -240,12 +239,16 @@ namespace TestingGround
 			// something is not right here
 
 			WriteableBitmap tempBitmap = wBitmap;
+			this.Title = "Testing Ground (Loading MotionBlur)";
 			ImageFilter.AlterTransparency(tempBitmap, 70);
-			wBitmap.Clear();
+			this.Title = "Testing Ground";
+			//wBitmap.Clear();
 			wBitmap = tempBitmap;
 			Viewport.Source = wBitmap;
 			
-			//tempBitmap.FillEllipseCentered(drawlineX += 5, 200, 20, 20, Color.FromArgb(255, 255, 255, 255));
+			
+			tempBitmap.FillEllipseCentered(drawlineX += 5, 200, 20, 20, Color.FromArgb(255, 255, 255, 255));
+			
 
 		}
 
