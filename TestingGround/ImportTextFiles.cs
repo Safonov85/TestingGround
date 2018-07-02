@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace TestingGround
 {
+	// Importing .txt content
 	public class ImportTextFiles
 	{
 		string hostFolder = "Books";

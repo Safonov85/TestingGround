@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 
 namespace TestingGround
 {
+	// Transparency
 	public static class ImageFilter
 	{
 		public static WriteableBitmap AlterTransparency(BitmapSource image, Byte alpha)
