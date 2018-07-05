@@ -31,6 +31,7 @@ namespace TestingGround
 
 		int height, width;
 		WriteableBitmap wBitmap;
+		WriteableBitmap blurBitmap;
 		int drawlineX = 200;
 
 		bool[,] barrowedBooks = new bool[3, 10]
@@ -62,6 +63,7 @@ namespace TestingGround
 			width = (int)this.ViewPortContainer.ActualWidth;
 			height = (int)this.ViewPortContainer.ActualHeight;
 			wBitmap = BitmapFactory.New(width, height);
+			
 
 			Viewport.Source = wBitmap;
 
@@ -250,6 +252,26 @@ namespace TestingGround
 			tempBitmap.FillEllipseCentered(drawlineX += 5, 200, 20, 20, Color.FromArgb(255, 255, 255, 255));
 			
 
+		}
+
+		private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+		{
+			
+		}
+
+		private void BlurPort_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+		{
+			WriteableBitmap tempBitmap = blurBitmap;
+			blurBitmap = tempBitmap;
+			BlurPort.Source = blurBitmap;
+
+			tempBitmap.FillRectangle(0, 0, width, height, Colors.Green);
+		}
+
+		private void BlurPort_Loaded(object sender, RoutedEventArgs e)
+		{
+			blurBitmap = BitmapFactory.New(width, height);
+			BlurPort.Source = blurBitmap;
 		}
 
 		private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
