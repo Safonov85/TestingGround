@@ -40,10 +40,14 @@
 
             <TabItem Header="MotionBlur" >
                 <Grid Background="Black" Name="ViewPortContainer" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="265*"/>
+                        <ColumnDefinition Width="181*"/>
+                    </Grid.ColumnDefinitions>
                     <Image Name="Viewport" Loaded="Viewport_Loaded"
                            HorizontalAlignment="Left" Height="405"
                            VerticalAlignment="Top" Width="446"
-                           MouseLeftButtonDown="Viewport_MouseLeftButtonDown"/>
+                           MouseLeftButtonDown="Viewport_MouseLeftButtonDown" Grid.ColumnSpan="2"/>
 
                 </Grid>
             </TabItem>
