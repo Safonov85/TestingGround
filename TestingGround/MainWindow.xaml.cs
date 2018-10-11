@@ -68,7 +68,7 @@ namespace TestingGround
 			Viewport.Source = wBitmap;
 
 			// Background Color
-			//wBitmap.FillRectangle(0, 0, width, height, Colors.Gray);
+			wBitmap.FillRectangle(0, 0, width, height, Colors.Gray);
 
 			//CompositionTarget.Rendering += CompositionTarget_Rendering;
 
@@ -266,13 +266,30 @@ namespace TestingGround
 			BlurPort.Source = blurBitmap;
 
 			tempBitmap.FillRectangle(0, 0, width, height, Colors.Green);
-		}
+            tempBitmap.FillTriangle(200, 50, 300, 300, 50, 200, Colors.Red);
+            tempBitmap.FillRectangle(123, 123, 350, 350, Colors.Beige);
+            // Testing image effect
+
+            //tempBitmap.AdjustContrast(50);
+            //tempBitmap.AdjustBrightness(200);
+
+        }
 
 		private void BlurPort_Loaded(object sender, RoutedEventArgs e)
 		{
-			blurBitmap = BitmapFactory.New(width, height);
-			BlurPort.Source = blurBitmap;
-		}
+            width = (int)this.ViewPortContainer.ActualWidth;
+            height = (int)this.ViewPortContainer.ActualHeight;
+            blurBitmap = BitmapFactory.New(width, height);
+
+            BlurPort.Source = wBitmap;
+
+            // Background Color
+            blurBitmap.FillRectangle(0, 0, width, height, Colors.Gray);
+
+            blurBitmap.FillEllipseCentered(drawlineX, 200, 20, 20, Color.FromArgb(255, 255, 255, 255));
+            blurBitmap = BitmapFactory.New(width, height);
+            BlurPort.Source = blurBitmap;
+        }
 
 		private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
