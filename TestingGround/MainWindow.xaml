@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Testing Ground" Height="463.855" Width="459.638" ResizeMode="CanMinimize">
     <Grid>
-        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="433" VerticalAlignment="Top" Width="452" SelectedIndex="0">
-            <TabItem Header="List">
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="433" VerticalAlignment="Top" Width="452" SelectedIndex="0" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="List" x:Name="tabList">
 
                 <Grid Background="#FFE5E5E5">
                     <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="242" VerticalAlignment="Top" Width="90" SelectionChanged="listBox_SelectionChanged"/>
@@ -22,13 +22,13 @@
                 </Grid>
 
             </TabItem>
-            <TabItem Header="DropDown">
+            <TabItem Header="DropDown" x:Name="tabDropDown">
                 <Grid Background="#FFE5E5E5">
                     <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120"/>
                 </Grid>
 
             </TabItem>
-            <TabItem Header="TreeListView">
+            <TabItem Header="TreeListView" x:Name="TreeListView">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="275*"/>
@@ -38,7 +38,7 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="MotionBlur" >
+            <TabItem Header="MotionBlur" x:Name="tabMotionBlur">
                 <Grid Background="Black" Name="ViewPortContainer" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="265*"/>
@@ -51,7 +51,7 @@
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Blur" >
+            <TabItem Header="Blur" x:Name="tabBlur">
                 <Grid Background="Black" Name="ViewPortBlur" >
                     <Image Name="BlurPort" Loaded="BlurPort_Loaded"
                            HorizontalAlignment="Left"

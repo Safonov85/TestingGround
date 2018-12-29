@@ -56,6 +56,8 @@ namespace TestingGround
 			CreateJaggedArray();
 
 			MixedOperations();
+
+            tabBlur.Background = Brushes.LightGreen;
 		}
 
 		private void Viewport_Loaded(object sender, RoutedEventArgs e)
@@ -291,7 +293,17 @@ namespace TestingGround
             BlurPort.Source = blurBitmap;
         }
 
-		private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Console.WriteLine(tabControl.SelectedItem.ToString());
+            Console.WriteLine(tabControl.SelectedIndex.ToString());
+            if(tabControl.SelectedIndex == 0)
+            {
+                tabList.Background = Brushes.LightCoral;
+            }
+        }
+
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 			int i = 0;
 			foreach(var item in makeList.names)
