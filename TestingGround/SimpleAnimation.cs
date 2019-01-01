@@ -11,7 +11,7 @@ namespace TestingGround
 {
 	public class SimpleAnimation
 	{
-		DispatcherTimer timer = new DispatcherTimer();
+		public DispatcherTimer timer = new DispatcherTimer();
 
 		public SimpleAnimation()
 		{

@@ -295,11 +295,24 @@ namespace TestingGround
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            anim.timer.Stop();
             Console.WriteLine(tabControl.SelectedItem.ToString());
             Console.WriteLine(tabControl.SelectedIndex.ToString());
-            if(tabControl.SelectedIndex == 0)
+            if (tabControl.SelectedIndex == 0)
             {
                 tabList.Background = Brushes.LightCoral;
+            }
+            if (tabControl.SelectedIndex == 1)
+            {
+                tabDropDown.Background = Brushes.LightCoral;
+            }
+            if (tabControl.SelectedIndex == 2)
+            {
+                tabTreeListView.Background = Brushes.LightCoral;
+            }
+            if (tabControl.SelectedIndex == 3)
+            {
+                tabMotionBlur.Background = Brushes.LightCoral;
             }
         }
 
