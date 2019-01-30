@@ -316,6 +316,27 @@ namespace TestingGround
             }
         }
 
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (comboBox.SelectedIndex == 0)
+            {
+                DropDownLabel.Content = "Gospel of Matthew";
+            }
+            if (comboBox.SelectedIndex == 1)
+            {
+                DropDownLabel.Content = "Gospel of Mark";
+            }
+            if (comboBox.SelectedIndex == 2)
+            {
+                DropDownLabel.Content = "Gospel of Luke";
+            }
+            if (comboBox.SelectedIndex == 3)
+            {
+                DropDownLabel.Content = "Gospel of John";
+            }
+            
+        }
+
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 			int i = 0;
