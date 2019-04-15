@@ -334,6 +334,12 @@ namespace TestingGround
             {
                 DropDownLabel.Content = "Gospel of John";
             }
+
+            if(comboBox.SelectedIndex > 3)
+            {
+                DropDownLabel.Content = "Not ready yet";
+            }
+
             
         }
 
@@ -353,7 +359,9 @@ namespace TestingGround
 					}
 					else
 					{
-						MessageBox.Show("Passage yet to be added");
+                        richTextBox.Document.Blocks.Clear();
+                        richTextBox.Document.Blocks.Add(new Paragraph(new Run("Not avaliable at the moment")));
+						//MessageBox.Show("Passage yet to be added");
 						break;
 					}
 					//richTextBox.Document.Blocks.Clear();
