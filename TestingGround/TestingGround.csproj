@@ -65,6 +65,7 @@
     </ApplicationDefinition>
     <Compile Include="BlurFilter.cs" />
     <Compile Include="ImageFilter.cs" />
+    <Compile Include="RandomNumberCreator.cs" />
     <Compile Include="RectangleConsole.cs" />
     <Compile Include="SimpleAnimation.cs" />
     <Page Include="MainWindow.xaml">

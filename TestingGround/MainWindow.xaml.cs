@@ -58,6 +58,8 @@ namespace TestingGround
 			MixedOperations();
 
             tabBlur.Background = Brushes.LightGreen;
+
+            Debug.WriteLine("Random Number is: " + RandomNumberCreator.RandomNum(1, 500).ToString());
 		}
 
 		private void Viewport_Loaded(object sender, RoutedEventArgs e)
