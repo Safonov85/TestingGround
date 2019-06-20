@@ -27,7 +27,7 @@ namespace TestingGround
 		Random random = new Random();
 		string hostFolder = "Books";
 		RectangleConsole rectConsl = new RectangleConsole();
-		SimpleAnimation anim = new SimpleAnimation();
+        SimpleAnimation anim;
 
 		int height, width;
 		WriteableBitmap wBitmap;
@@ -60,7 +60,9 @@ namespace TestingGround
             tabBlur.Background = Brushes.LightGreen;
 
             Debug.WriteLine("Random Number is: " + RandomNumberCreator.RandomNum(1, 500).ToString());
-		}
+
+            anim = new SimpleAnimation();
+        }
 
 		private void Viewport_Loaded(object sender, RoutedEventArgs e)
 		{
@@ -297,7 +299,7 @@ namespace TestingGround
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            anim.timer.Stop();
+            //anim.timer.Stop();
             Console.WriteLine(tabControl.SelectedItem.ToString());
             Console.WriteLine(tabControl.SelectedIndex.ToString());
             if (tabControl.SelectedIndex == 0)

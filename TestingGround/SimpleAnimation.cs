@@ -12,17 +12,27 @@ namespace TestingGround
 	public class SimpleAnimation
 	{
 		public DispatcherTimer timer = new DispatcherTimer();
+        string line = "-";
 
 		public SimpleAnimation()
 		{
-			timer.Interval = new TimeSpan(0, 0, 1);
+			timer.Interval = new TimeSpan(0, 0, 0, 0, 100);
 			timer.Tick += Timer_Tick;
 			timer.Start();
 		}
 
 		private void Timer_Tick(object sender, EventArgs e)
 		{
-			Debug.WriteLine(DateTime.Now.Second.ToString());
+            //Debug.Flush();
+
+            Debug.WriteLine(MoveLine());
 		}
+
+        string MoveLine()
+        {
+            line = " " + line;
+
+            return line;
+        }
 	}
 }
