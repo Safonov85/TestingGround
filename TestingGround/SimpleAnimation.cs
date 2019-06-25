@@ -13,6 +13,7 @@ namespace TestingGround
 	{
 		public DispatcherTimer timer = new DispatcherTimer();
         string line = "-";
+        bool reverse = false;
 
 		public SimpleAnimation()
 		{
@@ -25,12 +26,34 @@ namespace TestingGround
 		{
             //Debug.Flush();
 
-            Debug.WriteLine(MoveLine());
-		}
+            if(reverse == false)
+            {
+                Debug.WriteLine(MoveLineForward());
+                if(line.Length > 10)
+                {
+                    reverse = true;
+                }
+            }
+            else
+            {
+                Debug.WriteLine(MoveLineBackward());
+                if (line.Length == 1)
+                {
+                    reverse = false;
+                }
+            }
+        }
 
-        string MoveLine()
+        string MoveLineForward()
         {
             line = " " + line;
+
+            return line;
+        }
+        
+        string MoveLineBackward()
+        {
+            line = line.Remove(0, 1);
 
             return line;
         }
