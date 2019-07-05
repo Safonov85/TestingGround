@@ -347,6 +347,21 @@ namespace TestingGround
             
         }
 
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Space)
+            {
+                if(anim.timerRuns == true)
+                {
+                    anim.StopAnimation();
+                }
+                else
+                {
+                    anim.StartAnimation();
+                }
+            }
+        }
+
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 			int i = 0;

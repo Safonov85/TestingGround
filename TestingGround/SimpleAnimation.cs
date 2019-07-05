@@ -14,12 +14,14 @@ namespace TestingGround
 		public DispatcherTimer timer = new DispatcherTimer();
         string line = "-";
         bool reverse = false;
+        public bool timerRuns = false;
 
 		public SimpleAnimation()
 		{
 			timer.Interval = new TimeSpan(0, 0, 0, 0, 100);
 			timer.Tick += Timer_Tick;
 			timer.Start();
+            timerRuns = true;
 		}
 
 		private void Timer_Tick(object sender, EventArgs e)
@@ -56,6 +58,18 @@ namespace TestingGround
             line = line.Remove(0, 1);
 
             return line;
+        }
+
+        public void StopAnimation()
+        {
+            timer.Stop();
+            timerRuns = false;
+        }
+
+        public void StartAnimation()
+        {
+            timer.Start();
+            timerRuns = true;
         }
 	}
 }
