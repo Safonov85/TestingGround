@@ -20,8 +20,8 @@ namespace TestingGround
 		{
 			timer.Interval = new TimeSpan(0, 0, 0, 0, 100);
 			timer.Tick += Timer_Tick;
-			timer.Start();
-            timerRuns = true;
+			//timer.Start();
+            timerRuns = false;
 		}
 
 		private void Timer_Tick(object sender, EventArgs e)
