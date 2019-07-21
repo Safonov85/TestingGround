@@ -22,30 +22,7 @@ namespace TestingGround
 	/// </summary>
 	public partial class MainWindow : Window
 	{
-		MakeAList makeList = new MakeAList();
-		ImportTextFiles importTexts = new ImportTextFiles();
-		Random random = new Random();
-		string hostFolder = "Books";
-		RectangleConsole rectConsl = new RectangleConsole();
-        SimpleAnimation anim;
-
-		int height, width;
-		WriteableBitmap wBitmap;
-		WriteableBitmap blurBitmap;
-		int drawlineX = 200;
-
-		bool[,] barrowedBooks = new bool[3, 10]
-		{
-			{ false, false, false, false, false, false, false, false, false, false },
-			{ false, false, false, false, false, false, false, false, false, false },
-			{ false, false, false, false, false, false, false, false, false, false }
-		};
-
-		bool[][] jaggedArrayStuff = new bool[5][];
-
-		List<int> makeListConvert = new List<int>();
-
-		Dictionary<int, string> makeDictionary = new Dictionary<int, string>();
+		
 		
 
 		public MainWindow()
@@ -394,6 +371,30 @@ namespace TestingGround
 			}
 		}
 
+        MakeAList makeList = new MakeAList();
+        ImportTextFiles importTexts = new ImportTextFiles();
+        Random random = new Random();
+        string hostFolder = "Books";
+        RectangleConsole rectConsl = new RectangleConsole();
+        SimpleAnimation anim;
 
-	}
+        int height, width;
+        WriteableBitmap wBitmap;
+        WriteableBitmap blurBitmap;
+        int drawlineX = 200;
+
+        bool[,] barrowedBooks = new bool[3, 10]
+        {
+            { false, false, false, false, false, false, false, false, false, false },
+            { false, false, false, false, false, false, false, false, false, false },
+            { false, false, false, false, false, false, false, false, false, false }
+        };
+
+        bool[][] jaggedArrayStuff = new bool[5][];
+
+        List<int> makeListConvert = new List<int>();
+
+        Dictionary<int, string> makeDictionary = new Dictionary<int, string>();
+
+    }
 }
