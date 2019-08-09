@@ -22,9 +22,6 @@ namespace TestingGround
 	/// </summary>
 	public partial class MainWindow : Window
 	{
-		
-		
-
 		public MainWindow()
 		{
 			InitializeComponent();
