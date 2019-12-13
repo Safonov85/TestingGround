@@ -15,6 +15,7 @@ namespace TestingGround
         string line = "-";
         bool reverse = false;
         public bool timerRuns = false;
+        int count = 1;
 
 		public SimpleAnimation()
 		{
@@ -34,6 +35,8 @@ namespace TestingGround
                 if(line.Length > 10)
                 {
                     reverse = true;
+                    Debug.WriteLine(MoveLineForward() + " " + count);
+                    count++;
                 }
             }
             else
