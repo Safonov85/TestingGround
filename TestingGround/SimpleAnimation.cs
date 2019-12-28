@@ -16,6 +16,7 @@ namespace TestingGround
         bool reverse = false;
         public bool timerRuns = false;
         int count = 1;
+        float countingSteps = 1;
 
 		public SimpleAnimation()
 		{
@@ -31,7 +32,7 @@ namespace TestingGround
 
             if(reverse == false)
             {
-                Debug.WriteLine(MoveLineForward());
+                Debug.WriteLine(MoveLineForward() + " " + Math.Cos(DateTime.Now.Second).ToString("0.00"));
                 if(line.Length > 10)
                 {
                     reverse = true;
@@ -41,7 +42,7 @@ namespace TestingGround
             }
             else
             {
-                Debug.WriteLine(MoveLineBackward());
+                Debug.WriteLine(MoveLineBackward() + " " + Math.Sin(DateTime.Now.Second).ToString("0.00"));
                 if (line.Length == 1)
                 {
                     reverse = false;
