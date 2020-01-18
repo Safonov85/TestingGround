@@ -241,18 +241,22 @@ namespace TestingGround
 
 		private void BlurPort_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
 		{
-			WriteableBitmap tempBitmap = blurBitmap;
-			blurBitmap = tempBitmap;
-			BlurPort.Source = blurBitmap;
+            //WriteableBitmap tempBitmap = blurBitmap;
+            //blurBitmap = tempBitmap;
+            //BlurPort.Source = blurBitmap;
 
-			tempBitmap.FillRectangle(0, 0, width, height, Colors.Green);
-            tempBitmap.FillTriangle(200, 50, 300, 300, 50, 200, Colors.Red);
-            tempBitmap.FillRectangle(123, 123, 350, 350, Colors.Beige);
+            //tempBitmap.FillRectangle(0, 0, width, height, Colors.Green);
+            //tempBitmap.FillTriangle(200, 50, 300, 300, 50, 200, Colors.Red);
+            //tempBitmap.FillRectangle(123, 123, 350, 350, Colors.Beige);
             // Testing image effect
 
             //tempBitmap.AdjustContrast(50);
             //tempBitmap.AdjustBrightness(200);
 
+            //width = (int)this.ViewPortContainer.ActualWidth;
+            //height = (int)this.ViewPortContainer.ActualHeight;
+            
+            blurFilter.ScreenGraphics(blurBitmap, BlurPort, width, height);
         }
 
 		private void BlurPort_Loaded(object sender, RoutedEventArgs e)
@@ -379,6 +383,7 @@ namespace TestingGround
         WriteableBitmap wBitmap;
         WriteableBitmap blurBitmap;
         int drawlineX = 200;
+        BlurFilter blurFilter = new BlurFilter();
 
         bool[,] barrowedBooks = new bool[3, 10]
         {

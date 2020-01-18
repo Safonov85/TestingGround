@@ -32,7 +32,7 @@ namespace TestingGround
 
             if(reverse == false)
             {
-                Debug.WriteLine(MoveLineForward() + " " + Math.Cos(DateTime.Now.Second).ToString("0.00"));
+                Debug.WriteLine(MoveLineForward());
                 if(line.Length > 10)
                 {
                     reverse = true;
@@ -42,7 +42,7 @@ namespace TestingGround
             }
             else
             {
-                Debug.WriteLine(MoveLineBackward() + " " + Math.Sin(DateTime.Now.Second).ToString("0.00"));
+                Debug.WriteLine(MoveLineBackward());
                 if (line.Length == 1)
                 {
                     reverse = false;
