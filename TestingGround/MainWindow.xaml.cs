@@ -255,7 +255,7 @@ namespace TestingGround
 
             //width = (int)this.ViewPortContainer.ActualWidth;
             //height = (int)this.ViewPortContainer.ActualHeight;
-            
+
             blurFilter.ScreenGraphics(blurBitmap, BlurPort, width, height);
         }
 
@@ -265,7 +265,8 @@ namespace TestingGround
             height = (int)this.ViewPortContainer.ActualHeight;
             blurBitmap = BitmapFactory.New(width, height);
 
-            BlurPort.Source = wBitmap;
+            BlurPort.Source = blurBitmap;
+            Viewport.Source = blurBitmap;
 
             // Background Color
             blurBitmap.FillRectangle(0, 0, width, height, Colors.Gray);
