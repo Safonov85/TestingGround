@@ -9,6 +9,8 @@ using System.Windows.Media.Imaging;
 
 namespace TestingGround
 {
+        // This fiter is not working yet, STILL WIP
+
 	// Blur
 	public class BlurFilter
 	{
