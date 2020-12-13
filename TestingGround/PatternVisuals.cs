@@ -10,7 +10,7 @@ namespace TestingGround
     {
         public PatternVisuals()
         {
-
+            // Put priority on class cration
         }
     }
 }
