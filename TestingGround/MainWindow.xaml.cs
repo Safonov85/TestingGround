@@ -19,7 +19,11 @@ namespace TestingGround
 {
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
-	/// </summary>
+	/// </summary
+	
+	//
+	// This project will soon be closed and a new one will replace it. (this is too old, lets start fresh)
+	//
 	public partial class MainWindow : Window
 	{
 		public MainWindow()
