@@ -8,6 +8,7 @@ namespace TestingGround
 {
     public class FluidColorChage
     {
+        // reminder that this is next project, with HSL algorithm
         public FluidColorChage()
         {
 
