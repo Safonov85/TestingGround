@@ -51,5 +51,10 @@ namespace TestingGround
 
             return position;
         }
+    
+        int LocalRandomPosition() 
+        {
+          // create a local random position variable
+        } 
     }
 }
