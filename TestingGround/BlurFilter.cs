@@ -55,6 +55,15 @@ namespace TestingGround
         int LocalRandomPosition() 
         {
           // create a local random position variable
+        }
+
+        bool RandomOrNot(int value) 
+        {
+           if(value < 100)
+           {
+              return false;
+           }
+           return true;
         } 
     }
 }
