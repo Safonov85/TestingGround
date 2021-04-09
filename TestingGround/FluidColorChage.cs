@@ -13,5 +13,10 @@ namespace TestingGround
         {
 
         }
+
+       int CreateNextColor()
+       {
+          // gives next color value
+       }
     }
 }
