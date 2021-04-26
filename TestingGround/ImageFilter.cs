@@ -14,6 +14,7 @@ namespace TestingGround
 	// Transparency
 	public static class ImageFilter
 	{
+                // change Transparency level
 		public static WriteableBitmap AlterTransparency(BitmapSource image, Byte alpha)
 		{
 
