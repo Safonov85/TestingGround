@@ -11,6 +11,7 @@ namespace TestingGround
         public PatternVisuals()
         {
             // Put priority on class cration
+            // Another useless comment to remind myself
         }
     }
 }
