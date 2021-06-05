@@ -10,6 +10,7 @@ namespace TestingGround
 	{
 		public List<string> names = new List<string>();
 
+		// List of items
 		public MakeAList()
 		{
 			names.Add("Matthew");
