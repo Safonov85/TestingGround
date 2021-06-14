@@ -22,5 +22,14 @@ namespace TestingGround
 			names.Add("Pilatus");
 			names.Add("Herod");
 		}
+		
+		// List of Emtpy items
+		public MakeAList()
+		{
+			names.Add("")
+			names.Add("")
+			names.Add("")
+			names.Add("")
+		}
 	}
 }
