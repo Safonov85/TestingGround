@@ -9,6 +9,8 @@ namespace TestingGround
 {
 	public class RectangleConsole
 	{
+		// Needs movable rect at command in the future
+		
 		public void CreateRectangle()
 		{
 			Debug.WriteLine("");
