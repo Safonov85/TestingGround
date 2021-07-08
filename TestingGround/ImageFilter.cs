@@ -43,5 +43,10 @@ namespace TestingGround
 
 			return transparentImage;
 		}
+		
+		void SomeOtherGroundToTest()
+		{
+			// yes
+		}
 	}
 }
