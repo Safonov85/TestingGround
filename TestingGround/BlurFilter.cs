@@ -64,6 +64,12 @@ namespace TestingGround
               return false;
            }
            return true;
-        } 
+        }
+		
+	bool OnOrOff()
+	{
+	     bool value;
+	     return value;
+	}
     }
 }
