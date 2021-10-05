@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace TestingGround
 {
+	// Needs a Box and a circle in the future
 	public class RectangleConsole
 	{
 		// Needs movable rect at command in the future
