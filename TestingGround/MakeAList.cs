@@ -31,5 +31,10 @@ namespace TestingGround
 			names.Add("")
 			names.Add("")
 		}
+		
+		public void MakeAnotherList()
+		{
+		     // More cool names
+		}
 	}
 }
