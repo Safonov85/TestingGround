@@ -71,5 +71,10 @@ namespace TestingGround
 	     bool value;
 	     return value;
 	}
+		
+	void BlurThis()
+	{
+	     // Simple method for bluring image that will go public
+	}
     }
 }
