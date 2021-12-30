@@ -54,7 +54,10 @@ namespace TestingGround
     
         int LocalRandomPosition() 
         {
-          // create a local random position variable
+	    // create a local random position variable (WIP)
+	    int randPos = 1023;
+          
+	    return randPos;
         }
 
         bool RandomOrNot(int value) 
