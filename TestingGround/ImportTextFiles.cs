@@ -14,6 +14,7 @@ namespace TestingGround
 		//string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 		public string myPath = Environment.CurrentDirectory + "\\";
 		public List<string> listOfTexts = new List<string>();
+		string otherTextFiles;
 
 		MakeAList makeList = new MakeAList();
 
