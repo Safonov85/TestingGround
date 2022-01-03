@@ -79,5 +79,10 @@ namespace TestingGround
 	{
 	     // Simple method for bluring image that will go public
 	}
+		
+	private void RerouteFliterEfficency()
+	{
+	    // A new optimization method
+	}
     }
 }
