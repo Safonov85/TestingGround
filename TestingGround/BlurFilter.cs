@@ -84,5 +84,11 @@ namespace TestingGround
 	{
 	    // A new optimization method
 	}
+		
+	void TrueBlur()
+	{
+	   int fromEffect = 0;
+	   // more virtue needed
+	}
     }
 }
