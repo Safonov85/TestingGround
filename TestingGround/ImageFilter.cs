@@ -49,5 +49,11 @@ namespace TestingGround
 		{
 			// yes
 		}
+		
+		private void NoFuge(int numbersOnly)
+		{
+			// no more fuge
+		
+		}
 	}
 }
