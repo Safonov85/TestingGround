@@ -96,5 +96,10 @@ namespace TestingGround
 	   // test if dull
 	   return dulling;
 	}
+		
+	void Nullified()
+	{
+		// nullifiction confirmed
+	}
     }
 }
