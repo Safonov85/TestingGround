@@ -9,6 +9,8 @@ using System.Windows.Threading;
 
 namespace TestingGround
 {
+	
+	// refactoring on datatype methods needed
 	public class SimpleAnimation
 	{
 		public DispatcherTimer timer = new DispatcherTimer();
