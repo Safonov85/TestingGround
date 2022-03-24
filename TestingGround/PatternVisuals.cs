@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace TestingGround
 {
+    
+    // non-issie
     public class PatternVisuals
     {
         public PatternVisuals()
