@@ -90,16 +90,5 @@ namespace TestingGround
 	   int fromEffect = 0;
 	   // more virtue needed
 	}
-		
-	bool Dull(bool dulling)
-	{
-	   // test if dull
-	   return dulling;
-	}
-		
-	void Nullified()
-	{
-		// nullifiction confirmed
-	}
     }
 }
