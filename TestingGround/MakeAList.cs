@@ -36,5 +36,10 @@ namespace TestingGround
 		{
 		     // More cool names
 		}
+		
+		bool ForTheNuts()
+		{
+			return true
+		}
 	}
 }
