@@ -77,5 +77,10 @@ namespace TestingGround
             timer.Start();
             timerRuns = true;
         }
+	
+	bool Selecta()
+	{
+		return true
+	}
 	}
 }
