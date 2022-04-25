@@ -20,5 +20,15 @@ namespace TestingGround
         {
             // read title
         }
+        
+        void Tricks(int half)
+        {
+            
+        }
+        
+        void ReTricks()
+        {
+            
+        }
     }
 }
