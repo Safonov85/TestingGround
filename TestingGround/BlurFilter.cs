@@ -93,5 +93,11 @@ namespace TestingGround
 	   int fromEffect = 0;
 	   // more virtue needed
 	}
+		
+	void KnockOnWood()
+	{
+	   string afterSingles;
+	   // Refresh history
+	}
     }
 }
