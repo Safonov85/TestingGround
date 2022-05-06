@@ -12,6 +12,9 @@ namespace TestingGround
 	{
 		// Needs movable rect at command in the future
 		
+		int softCallus;
+		int hardCallus;
+		
 		public void CreateRectangle()
 		{
 			Debug.WriteLine("");
