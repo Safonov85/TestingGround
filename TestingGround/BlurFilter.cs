@@ -14,7 +14,8 @@ namespace TestingGround
 	// Blur
 	public class BlurFilter
 	{
-		
+	
+	// string for krux
 	string KruxOfFix;
 	int NextLine;
         public WriteableBitmap wBitmap;
