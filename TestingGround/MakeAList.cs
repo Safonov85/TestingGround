@@ -8,6 +8,7 @@ namespace TestingGround
 {
 	public class MakeAList
 	{
+		// more commentery in class needed
 		public List<string> names = new List<string>();
 
 		// List of items
