@@ -10,10 +10,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace TestingGround
-{
+{	
 	// Transparency
 	public static class ImageFilter
 	{
+		int trix = 0;
+		
 		// More filter ideas waiting in line atp
                 // change Transparency level
 		public static WriteableBitmap AlterTransparency(BitmapSource image, Byte alpha)
