@@ -21,6 +21,8 @@ namespace TestingGround
         public WriteableBitmap wBitmap;
         int drawlineX = 200;
         Random random = new Random();
+	bool BlurSuprix = false;
+	int NetWorth = 50;
 
         void CreateGraphics(int height, int width, Image Viewport)
         {
