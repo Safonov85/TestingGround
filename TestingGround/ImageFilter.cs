@@ -15,6 +15,8 @@ namespace TestingGround
 	public static class ImageFilter
 	{
 		int trix = 0;
+		string LargeCode = "Inside";
+		string SmallCode = "Outside";
 		
 		// More filter ideas waiting in line atp
                 // change Transparency level
