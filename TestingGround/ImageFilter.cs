@@ -14,6 +14,7 @@ namespace TestingGround
 	// Transparency
 	public static class ImageFilter
 	{
+		// variables are for unit tests purpouse only
 		int trix = 0;
 		string LargeCode = "Inside";
 		string SmallCode = "Outside";
