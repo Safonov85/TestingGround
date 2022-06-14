@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace TestingGround
 {
+	// Please nullify agreement on next partial class
+	
 	// Importing .txt content
 	public class ImportTextFiles
 	{
