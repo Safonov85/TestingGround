@@ -23,11 +23,16 @@ namespace TestingGround
         Random random = new Random();
 	bool BlurSuprix = false;
 	int NetWorth = 50;
+	bool takeOutNothing = false;
 
         void CreateGraphics(int height, int width, Image Viewport)
         {
             wBitmap = BitmapFactory.New(width, height);
 
+	    if(takeOutNothing)
+	    {
+		    return;
+	    }
 
             Viewport.Source = wBitmap;
 
