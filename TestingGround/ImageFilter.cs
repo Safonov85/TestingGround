@@ -58,6 +58,10 @@ namespace TestingGround
 		private void NoFuge(int numbersOnly)
 		{
 			// no more fuge
+			if(true)
+			{
+				numbersOnly = 45;
+			}
 		
 		}
 	}
