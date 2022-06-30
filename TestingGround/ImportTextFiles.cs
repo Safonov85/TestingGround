@@ -46,10 +46,5 @@ namespace TestingGround
 		{
 			Directory.CreateDirectory(myPath);
 		}
-		
-		void NoneNull()
-		{
-			
-		}
 	}
 }
