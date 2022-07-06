@@ -32,15 +32,5 @@ namespace TestingGround
 			names.Add("")
 			names.Add("")
 		}
-		
-		public void MakeAnotherList()
-		{
-		     // More cool names
-		}
-		
-		bool ForTheNuts()
-		{
-			return true
-		}
 	}
 }
